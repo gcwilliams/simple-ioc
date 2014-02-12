@@ -2,7 +2,7 @@
 
 ### A simple IOC container
 
-Written as a simple POC to see how long it would take to write an IOC container that would perform constructor only injections.
+A very simple IOC written for the fun of it...
 
-* First constructor injection only
-* Never used in anger
+* Constructor injection only
+* No need for annotations
