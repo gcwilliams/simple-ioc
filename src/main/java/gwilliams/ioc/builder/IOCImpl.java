@@ -46,11 +46,11 @@ class IOCImpl implements IOC {
 
 		try {
 			Constructor<?> constructor = implementationClazz.getConstructors()[0];
-			
+
 			Object[] dependencies = Arrays
 				.asList(constructor.getParameterTypes())
 				.stream()
-				.map(c -> (Object)resolve(c))
+				.<Object>map(c -> resolve(c))
 				.toArray();
 
 			return (T) constructor.newInstance(dependencies);
