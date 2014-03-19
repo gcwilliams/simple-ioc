@@ -3,8 +3,7 @@ package gwilliams.ioc.builder;
 import gwilliams.ioc.IOC;
 
 import java.util.List;
-
-import com.google.common.collect.Lists;
+import java.util.ArrayList;
 
 
 /**
@@ -15,7 +14,7 @@ import com.google.common.collect.Lists;
  */
 public final class IOCBuilder {
 	
-	private final List<BinderImpl<?>> binders = Lists.newArrayList();
+	private final List<BinderImpl<?>> binders = new ArrayList<>();
 
 	private IOCBuilder() {}
 	
