@@ -3,9 +3,8 @@ package gwilliams.ioc.builder;
 import gwilliams.ioc.IOC;
 
 import java.lang.reflect.Constructor;
-import java.util.List;
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -49,7 +48,7 @@ class IOCImpl implements IOC {
 
 			Object[] dependencies = Arrays
 				.asList(constructor.getParameterTypes())
-				.stream()
+				.parallelStream()
 				.<Object>map(c -> resolve(c))
 				.toArray();
 

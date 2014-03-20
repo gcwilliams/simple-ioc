@@ -1,6 +1,6 @@
 package gwilliams.ioc.builder;
 
-import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.Is.isA;
 import gwilliams.ioc.IOC;
 
 import org.junit.Assert;
@@ -27,7 +27,7 @@ public class IOCBuilderTest {
 		TestDao dao = ioc.resolve(TestDao.class);
 		
 		// assert
-		Assert.assertThat(dao, is(TestDao.class));
+		Assert.assertThat(dao, isA(TestDao.class));
 	}
 	
 	@Test
@@ -44,7 +44,7 @@ public class IOCBuilderTest {
 		TestValidator validator = ioc.resolve(TestValidator.class);
 		
 		// assert
-		Assert.assertThat(validator, is(TestValidator.class));
+		Assert.assertThat(validator, isA(TestValidator.class));
 	}
 	
 	@Test
@@ -62,7 +62,7 @@ public class IOCBuilderTest {
 		TestService service = ioc.resolve(TestService.class);
 		
 		// assert
-		Assert.assertThat(service, is(TestService.class));
+		Assert.assertThat(service, isA(TestService.class));
 	}
 	
 	@Test(expected = BindingException.class)
